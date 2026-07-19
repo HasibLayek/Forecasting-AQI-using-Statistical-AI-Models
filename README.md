@@ -168,16 +168,6 @@ Rscript src/models/prophet_model.R
 - [ ] **Explainable AI (SHAP)** to interpret XGBoost/LSTM "black-box" predictions for policymakers
 - [ ] **Spatio-Temporal Graph Neural Networks (GNNs)** to model pollution flow *between* stations rather than in isolation
 
----
-
-## 👥 Team & Acknowledgements
-
-This project was completed as a group dissertation for the M.Sc. Statistics program, under the Department of Statistics & Operations Research, Aligarh Muslim University.
-
-**Group members:**
-Mohd Farhan Khan · **Abdul Hasib** · Mohd Arhab Ahmad · Mohammad Zaid · MD Aabish Rahman
-
-**Supervised by:** Prof. Aquil Ahmed & Dr. Aijaz Ahmad Dar
 
 ---
 
