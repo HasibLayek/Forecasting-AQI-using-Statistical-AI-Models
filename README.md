@@ -106,12 +106,14 @@ AQI-Forecasting-Comparative-Study/
 │   └── processed/            # Cleaned & imputed datasets
 ├── notebooks/                # EDA and exploratory notebooks
 ├── src/
-│   ├── preprocessing/        # Cleaning, STL imputation, feature engineering
+│   ├── preprocessing/
+│   │   └── 01_eda_and_imputation.R   # Cleaning, EDA, month×hour imputation
 │   ├── models/
-│   │   ├── sarima_model.R
-│   │   ├── prophet_model.R
-│   │   ├── xgboost_model.py
-│   │   └── lstm_model.py
+│   │   ├── sarima_model.R            # SARIMA (auto.arima), stationarity tests
+│   │   ├── prophet_model.R           # Prophet, train/test accuracy
+│   │   ├── xgboost_train_eval.py     # XGBoost regression pipeline + metrics
+│   │   ├── xgboost_forecast.py       # XGBoost 365-day iterative forecast
+│   │   └── lstm_model.py             # LSTM sequence model + diagnostics
 │   └── evaluation/           # RMSE, MAE, R² computation & comparison scripts
 ├── results/
 │   ├── figures/               # Plots: actual vs predicted, residuals, seasonality
@@ -137,13 +139,17 @@ python -m venv venv
 source venv/bin/activate        # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
-# 3. Run the AI/ML models
-python src/models/xgboost_model.py
-python src/models/lstm_model.py
+# 3. Run preprocessing (R, requires `tidyverse`, `zoo`, `corrplot`)
+Rscript src/preprocessing/01_eda_and_imputation.R
 
 # 4. Run the statistical models (requires R with `forecast` and `prophet` packages)
 Rscript src/models/sarima_model.R
 Rscript src/models/prophet_model.R
+
+# 5. Run the AI/ML models
+python src/models/xgboost_train_eval.py   # train/test evaluation (Table 4.5 style metrics)
+python src/models/xgboost_forecast.py     # 365-day forward forecast with lag features
+python src/models/lstm_model.py           # LSTM sequence model + diagnostic plots
 ```
 
 > 💡 Adjust file paths in each script's config section to point to your local `data/processed/` directory.
@@ -168,6 +174,16 @@ Rscript src/models/prophet_model.R
 - [ ] **Explainable AI (SHAP)** to interpret XGBoost/LSTM "black-box" predictions for policymakers
 - [ ] **Spatio-Temporal Graph Neural Networks (GNNs)** to model pollution flow *between* stations rather than in isolation
 
+---
+
+## 👥 Team & Acknowledgements
+
+This project was completed as a group dissertation for the M.Sc. Statistics program (Course: STM3072 – Project), under the Department of Statistics & Operations Research, Aligarh Muslim University.
+
+**Group members:**
+Mohd Farhan Khan · **Abdul Hasib** · Mohd Arhab Ahmad · Mohammad Zaid · MD Aabish Rahman
+
+**Supervised by:** Prof. Aquil Ahmed & Dr. Aijaz Ahmad Dar
 
 ---
 
