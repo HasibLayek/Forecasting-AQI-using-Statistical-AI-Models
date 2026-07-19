@@ -209,6 +209,6 @@ This project is licensed under the [MIT License](LICENSE) — feel free to use t
 
 <div align="center">
 
-⭐ *If you find this project useful, consider giving it a star!*
+
 
 </div>
