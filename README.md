@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌫️ Forecasting Air Quality Index (AQI)
+# 📊 Forecasting Air Quality Index (AQI)
 ### A Comparative Study of Statistical, Machine Learning & Deep Learning Models
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
