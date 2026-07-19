@@ -1,7 +1,12 @@
 <div align="center">
 
-# 📊 Forecasting Air Quality Index (AQI)
+<p align="begin">
+  <img src="https://user-images.githubusercontent.com/74038190/215282961-18b29705-cb38-4af2-9f96-9f57abbea1aa.png" width="100">
+</p>  
+
+#  Forecasting Air Quality Index (AQI)
 ### A Comparative Study of Statistical, Machine Learning & Deep Learning Models
+ 
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![R](https://img.shields.io/badge/R-4.x-276DC3?logo=r&logoColor=white)](https://www.r-project.org/)
