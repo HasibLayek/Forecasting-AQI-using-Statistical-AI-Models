@@ -119,7 +119,7 @@ AQI-Forecasting-Comparative-Study/
 │   ├── figures/               # Plots: actual vs predicted, residuals, seasonality
 │   └── metrics/                # Saved metric tables (CSV)
 ├── report/
-│   └── Dissertation_Group_A.pdf
+│   └── Dissertation.pdf
 ├── requirements.txt
 ├── LICENSE
 └── README.md
@@ -152,7 +152,7 @@ python src/models/xgboost_forecast.py     # 365-day forward forecast with lag fe
 python src/models/lstm_model.py           # LSTM sequence model + diagnostic plots
 ```
 
-> 💡 Adjust file paths in each script's config section to point to your local `data/processed/` directory.
+
 
 ---
 
@@ -176,16 +176,6 @@ python src/models/lstm_model.py           # LSTM sequence model + diagnostic plo
 
 ---
 
-## 👥 Team & Acknowledgements
-
-This project was completed as a group dissertation for the M.Sc. Statistics program (Course: STM3072 – Project), under the Department of Statistics & Operations Research, Aligarh Muslim University.
-
-**Group members:**
-Mohd Farhan Khan · **Abdul Hasib** · Mohd Arhab Ahmad · Mohammad Zaid · MD Aabish Rahman
-
-**Supervised by:** Prof. Aquil Ahmed & Dr. Aijaz Ahmad Dar
-
----
 
 ## 📄 Citation
 
