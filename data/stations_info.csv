@@ -1,0 +1,41 @@
+file_name,state,city,agency,station_location,start_month,start_month_num,start_year
+DL001,Delhi,Delhi,CPCB,"ITO, Delhi ",January,1,2010
+DL002,Delhi,Delhi,CPCB,"Shadipur, Delhi ",January,1,2010
+DL003,Delhi,Delhi,CPCB,"Sirifort, Delhi ",January,1,2010
+DL004,Delhi,Delhi,CPCB,"NSIT Dwarka, Delhi ",January,1,2010
+DL005,Delhi,Delhi,CPCB,"IHBAS, Dilshad Garden, Delhi ",January,1,2010
+DL006,Delhi,Delhi,CPCB,"DTU, Delhi ",January,1,2010
+DL007,Delhi,Delhi,IMD,"Burari Crossing, Delhi ",March,3,2010
+DL008,Delhi,Delhi,IMD,"North Campus, DU, Delhi ",March,3,2010
+DL009,Delhi,Delhi,IMD,"Pusa, Delhi ",May,5,2010
+DL010,Delhi,Delhi,IMD,"CRRI Mathura Road, Delhi ",August,8,2010
+DL011,Delhi,Delhi,IMD,"Aya Nagar, Delhi ",September,9,2010
+DL012,Delhi,Delhi,DPCC,"Mandir Marg, Delhi ",May,5,2011
+DL013,Delhi,Delhi,DPCC,"R K Puram, Delhi ",May,5,2011
+DL014,Delhi,Delhi,DPCC,"Punjabi Bagh, Delhi ",June,6,2011
+DL015,Delhi,Delhi,DPCC,"Anand Vihar, Delhi ",August,8,2012
+DL016,Delhi,Delhi,IMD,"IGI Airport (T3), Delhi ",December,12,2013
+DL017,Delhi,Delhi,IMD,"Lodhi Road, Delhi ",January,1,2014
+DL018,Delhi,Delhi,CPCB,"East Arjun Nagar, Delhi ",November,11,2017
+DL019,Delhi,Delhi,DPCC,"Okhla Phase 2, Delhi ",February,2,2018
+DL020,Delhi,Delhi,DPCC,"Wazirpur, Delhi ",February,2,2018
+DL021,Delhi,Delhi,DPCC,"Najafgarh, Delhi ",February,2,2018
+DL022,Delhi,Delhi,DPCC,"Narela, Delhi ",February,2,2018
+DL023,Delhi,Delhi,DPCC,"Sonia Vihar, Delhi ",February,2,2018
+DL024,Delhi,Delhi,DPCC,"Rohini, Delhi ",February,2,2018
+DL025,Delhi,Delhi,DPCC,"Nehru Nagar, Delhi ",February,2,2018
+DL026,Delhi,Delhi,DPCC,"Vivek Vihar, Delhi ",February,2,2018
+DL027,Delhi,Delhi,DPCC,"Patparganj, Delhi ",February,2,2018
+DL028,Delhi,Delhi,DPCC,"Dr. Karni Singh Shooting Range, Delhi ",March,3,2018
+DL029,Delhi,Delhi,DPCC,"Major Dhyan Chand National Stadium, Delhi ",March,3,2018
+DL030,Delhi,Delhi,DPCC,"Dwarka Sector 8, Delhi ",March,3,2018
+DL031,Delhi,Delhi,DPCC,"Ashok Vihar, Delhi ",March,3,2018
+DL032,Delhi,Delhi,DPCC,"Jawaharlal Nehru Stadium, Delhi ",March,3,2018
+DL033,Delhi,Delhi,DPCC,"Jahangirpuri, Delhi ",March,3,2018
+DL034,Delhi,Delhi,DPCC,"Sri Aurobindo Marg, Delhi ",July,7,2018
+DL035,Delhi,Delhi,DPCC,"Bawana, Delhi ",July,7,2018
+DL036,Delhi,Delhi,DPCC,"Mundka, Delhi ",July,7,2018
+DL037,Delhi,Delhi,DPCC,"Pusa, Delhi ",July,7,2018
+DL038,Delhi,Delhi,DPCC,"Alipur, Delhi ",November,11,2018
+DL039,Delhi,Delhi,IITM,"Lodhi Road, Delhi ",November,11,2020
+DL040,Delhi,Delhi,IITM,"Chandni Chowk, Delhi ",November,11,2020
