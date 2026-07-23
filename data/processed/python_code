@@ -1,1 +1,255 @@
+## Data Cleaning for DL016 (IGI Airport, Delhi)
+import pandas as pd
 
+# -------------------------------
+# 1. Load and Clean Data
+# -------------------------------
+file = r"C:\Education\BOOKS\Project AMU\DATAsets\DL016.csv"  # <-- change path
+data = pd.read_csv(file)
+
+# Clean column names (replace spaces/dots with underscores)
+data.columns = data.columns.str.replace(r"[ .]", "_", regex=True)
+
+# Convert datetime
+data['From_Date'] = pd.to_datetime(data['From_Date'], errors='coerce')
+
+# -------------------------------
+# 2. Select Pollutants
+# -------------------------------
+pm_cols = ['PM2_5_(ug/m3)', 'PM10_(ug/m3)']
+gas_cols = ['Ozone_(ug/m3)', 'NO2_(ug/m3)', 'NO_(ug/m3)']
+
+# Create month-hour grouping keys
+data['month'] = data['From_Date'].dt.month
+data['hour'] = data['From_Date'].dt.hour
+
+# -------------------------------
+# 3. Imputation for PM2.5 & PM10
+# -------------------------------
+for col in pm_cols:
+    # Linear interpolation
+    data[col] = data[col].interpolate(method='linear')
+    
+    # Fill remaining with month×hour group mean
+    grp_mean = data.groupby(['month','hour'])[col].transform('mean')
+    data[col] = data[col].fillna(grp_mean)
+    
+    # Final fallback: global mean
+    data[col] = data[col].fillna(data[col].mean())
+
+# -------------------------------
+# 4. Imputation for Ozone, NO, NO2
+# -------------------------------
+for col in gas_cols:
+    # Month×hour group mean
+    grp_mean = data.groupby(['month','hour'])[col].transform('mean')
+    data[col] = data[col].fillna(grp_mean)
+    
+    # Final fallback: global mean
+    data[col] = data[col].fillna(data[col].mean())
+
+# -------------------------------
+# 5. Save Overwritten Dataset
+# -------------------------------
+out_file = "DL016_imputed_overwritten.csv"
+data.to_csv(out_file, index=False)
+print(f"Imputed dataset saved to: {out_file}")
+
+# -------------------------------
+# 6. Check Missing Values
+# -------------------------------
+print("\nMissing values after imputation:")
+print(data[pm_cols + gas_cols].isna().sum())
+
+
+
+## Data Cleaning for DL017 (Lodhi Road, Delhi)
+import pandas as pd
+
+# -------------------------------
+# 1. Load and Clean Data
+# -------------------------------
+file = r"C:\Education\BOOKS\Project AMU\DATAsets\DL017.csv"  # <-- change path
+data = pd.read_csv(file)
+
+# Clean column names (replace spaces/dots with underscores)
+data.columns = data.columns.str.replace(r"[ .]", "_", regex=True)
+
+# Convert datetime
+data['From_Date'] = pd.to_datetime(data['From_Date'], errors='coerce')
+
+# -------------------------------
+# 2. Select Pollutants
+# -------------------------------
+pm_cols = ['PM2_5_(ug/m3)', 'PM10_(ug/m3)']
+gas_cols = ['Ozone_(ug/m3)', 'NO2_(ug/m3)', 'NO_(ug/m3)']
+
+# Create month-hour grouping keys
+data['month'] = data['From_Date'].dt.month
+data['hour'] = data['From_Date'].dt.hour
+
+# -------------------------------
+# 3. Imputation for PM2.5 & PM10
+# -------------------------------
+for col in pm_cols:
+    # Linear interpolation
+    data[col] = data[col].interpolate(method='linear')
+    
+    # Fill remaining with month×hour group mean
+    grp_mean = data.groupby(['month','hour'])[col].transform('mean')
+    data[col] = data[col].fillna(grp_mean)
+    
+    # Final fallback: global mean
+    data[col] = data[col].fillna(data[col].mean())
+
+# -------------------------------
+# 4. Imputation for Ozone, NO, NO2
+# -------------------------------
+for col in gas_cols:
+    # Month×hour group mean
+    grp_mean = data.groupby(['month','hour'])[col].transform('mean')
+    data[col] = data[col].fillna(grp_mean)
+    
+    # Final fallback: global mean
+    data[col] = data[col].fillna(data[col].mean())
+
+# -------------------------------
+# 5. Save Overwritten Dataset
+# -------------------------------
+out_file = "DL017_imputed_overwritten.csv"
+data.to_csv(out_file, index=False)
+print(f"Imputed dataset saved to: {out_file}")
+
+# -------------------------------
+# 6. Check Missing Values
+# -------------------------------
+print("\nMissing values after imputation:")
+print(data[pm_cols + gas_cols].isna().sum())
+
+
+## Data Cleaning for DL019 (Okhla Phase 2, Delhi)
+import pandas as pd
+
+# -------------------------------
+# 1. Load and Clean Data
+# -------------------------------
+file = r"C:\Education\BOOKS\Project AMU\DATAsets\DL019.csv"  # <-- change path
+data = pd.read_csv(file)
+
+# Clean column names (replace spaces/dots with underscores)
+data.columns = data.columns.str.replace(r"[ .]", "_", regex=True)
+
+# Convert datetime
+data['From_Date'] = pd.to_datetime(data['From_Date'], errors='coerce')
+
+# -------------------------------
+# 2. Select Pollutants
+# -------------------------------
+pm_cols = ['PM2_5_(ug/m3)', 'PM10_(ug/m3)']
+gas_cols = ['Ozone_(ug/m3)', 'NO2_(ug/m3)', 'NO_(ug/m3)']
+
+# Create month-hour grouping keys
+data['month'] = data['From_Date'].dt.month
+data['hour'] = data['From_Date'].dt.hour
+
+# -------------------------------
+# 3. Imputation for PM2.5 & PM10
+# -------------------------------
+for col in pm_cols:
+    # Linear interpolation
+    data[col] = data[col].interpolate(method='linear')
+    
+    # Fill remaining with month×hour group mean
+    grp_mean = data.groupby(['month','hour'])[col].transform('mean')
+    data[col] = data[col].fillna(grp_mean)
+    
+    # Final fallback: global mean
+    data[col] = data[col].fillna(data[col].mean())
+
+# -------------------------------
+# 4. Imputation for Ozone, NO, NO2
+# -------------------------------
+for col in gas_cols:
+    # Month×hour group mean
+    grp_mean = data.groupby(['month','hour'])[col].transform('mean')
+    data[col] = data[col].fillna(grp_mean)
+    
+    # Final fallback: global mean
+    data[col] = data[col].fillna(data[col].mean())
+
+# -------------------------------
+# 5. Save Overwritten Dataset
+# -------------------------------
+out_file = "DL019_imputed_overwritten.csv"
+data.to_csv(out_file, index=False)
+print(f"Imputed dataset saved to: {out_file}")
+
+# -------------------------------
+# 6. Check Missing Values
+# -------------------------------
+print("\nMissing values after imputation:")
+print(data[pm_cols + gas_cols].isna().sum())
+
+
+## Data Cleaning for DL023 (Sonia Vihar, Delhi)
+import pandas as pd
+
+# -------------------------------
+# 1. Load and Clean Data
+# -------------------------------
+file = r"C:\Education\BOOKS\Project AMU\DATAsets\DL023.csv"  # <-- change path
+data = pd.read_csv(file)
+
+# Clean column names (replace spaces/dots with underscores)
+data.columns = data.columns.str.replace(r"[ .]", "_", regex=True)
+
+# Convert datetime
+data['From_Date'] = pd.to_datetime(data['From_Date'], errors='coerce')
+
+# -------------------------------
+# 2. Select Pollutants
+# -------------------------------
+pm_cols = ['PM2_5_(ug/m3)', 'PM10_(ug/m3)']
+gas_cols = ['Ozone_(ug/m3)', 'NO2_(ug/m3)', 'NO_(ug/m3)']
+
+# Create month-hour grouping keys
+data['month'] = data['From_Date'].dt.month
+data['hour'] = data['From_Date'].dt.hour
+
+# -------------------------------
+# 3. Imputation for PM2.5 & PM10
+# -------------------------------
+for col in pm_cols:
+    # Linear interpolation
+    data[col] = data[col].interpolate(method='linear')
+    
+    # Fill remaining with month×hour group mean
+    grp_mean = data.groupby(['month','hour'])[col].transform('mean')
+    data[col] = data[col].fillna(grp_mean)
+    
+    # Final fallback: global mean
+    data[col] = data[col].fillna(data[col].mean())
+
+# -------------------------------
+# 4. Imputation for Ozone, NO, NO2
+# -------------------------------
+for col in gas_cols:
+    # Month×hour group mean
+    grp_mean = data.groupby(['month','hour'])[col].transform('mean')
+    data[col] = data[col].fillna(grp_mean)
+    
+    # Final fallback: global mean
+    data[col] = data[col].fillna(data[col].mean())
+
+# -------------------------------
+# 5. Save Overwritten Dataset
+# -------------------------------
+out_file = "DL023_imputed_overwritten.csv"
+data.to_csv(out_file, index=False)
+print(f"Imputed dataset saved to: {out_file}")
+
+# -------------------------------
+# 6. Check Missing Values
+# -------------------------------
+print("\nMissing values after imputation:")
+print(data[pm_cols + gas_cols].isna().sum())
