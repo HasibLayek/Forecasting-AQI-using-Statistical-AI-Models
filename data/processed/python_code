@@ -4,7 +4,7 @@ import pandas as pd
 # -------------------------------
 # 1. Load and Clean Data
 # -------------------------------
-file = r"C:\Education\BOOKS\Project AMU\DATAsets\DL016.csv"  # <-- change path
+file = r"C:\DL016.csv"  # <-- change path
 data = pd.read_csv(file)
 
 # Clean column names (replace spaces/dots with underscores)
@@ -63,13 +63,13 @@ print(data[pm_cols + gas_cols].isna().sum())
 
 
 
-## Data Cleaning for DL017 (Lodhi Road, Delhi)
+## *Data Cleaning for DL017 (Lodhi Road, Delhi)*
 import pandas as pd
 
 # -------------------------------
 # 1. Load and Clean Data
 # -------------------------------
-file = r"C:\Education\BOOKS\Project AMU\DATAsets\DL017.csv"  # <-- change path
+file = r"C:\DL017.csv"  # <-- change path
 data = pd.read_csv(file)
 
 # Clean column names (replace spaces/dots with underscores)
@@ -133,7 +133,7 @@ import pandas as pd
 # -------------------------------
 # 1. Load and Clean Data
 # -------------------------------
-file = r"C:\Education\BOOKS\Project AMU\DATAsets\DL019.csv"  # <-- change path
+file = r"C:\DL019.csv"  # <-- change path
 data = pd.read_csv(file)
 
 # Clean column names (replace spaces/dots with underscores)
@@ -197,7 +197,7 @@ import pandas as pd
 # -------------------------------
 # 1. Load and Clean Data
 # -------------------------------
-file = r"C:\Education\BOOKS\Project AMU\DATAsets\DL023.csv"  # <-- change path
+file = r"C:\DL023.csv"  # <-- change path
 data = pd.read_csv(file)
 
 # Clean column names (replace spaces/dots with underscores)
